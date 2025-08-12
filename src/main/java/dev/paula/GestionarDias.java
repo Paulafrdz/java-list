@@ -2,7 +2,7 @@ package dev.paula;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Collection;
+import java.util.Collections;
 
 public class GestionarDias {
 
@@ -40,4 +40,18 @@ public class GestionarDias {
             return dias.get(indice);
         } return null;
     }
+
+    public boolean existeDia(String dia){
+        return dias.contains(dia);
+    }
+
+    public void ordenarAlfabeticamente(){
+        Collections.sort(dias);
+    } 
+
+    public void vaciarLista(){
+        dias.clear();
+    }
+
+
 }
