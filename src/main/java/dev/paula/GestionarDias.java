@@ -35,5 +35,9 @@ public class GestionarDias {
         return dias.remove(dia);
     }
 
-    
+    public String getDia(int indice){
+        if (indice >= 0 && indice < dias.size()){
+            return dias.get(indice);
+        } return null;
+    }
 }
