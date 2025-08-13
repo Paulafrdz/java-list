@@ -21,11 +21,20 @@ public class GestionarDiasTest {
         assertEquals(7, gestor.getLargo());
     }
 
+    @Test
     public void testGetDias(){
         List<String> dias = gestor.getDias();
         assertTrue(dias.contains("Lunes"));
         assertTrue(dias.contains("Domingo"));
     }
+
+    @Test
+    public void testEliminarDia(){
+        assertTrue(gestor.eliminarDia("Martes"));
+        assertFalse(gestor.eliminarDia("Martes"));
+    }
 }
+
+
 
 
