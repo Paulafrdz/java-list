@@ -33,7 +33,34 @@ public class GestionarDiasTest {
         assertTrue(gestor.eliminarDia("Martes"));
         assertFalse(gestor.eliminarDia("Martes"));
     }
+
+    @Test
+    public void testGetDia(){
+        assertEquals("Lunes", gestor.getDia(0));
+        assertNull(gestor.getDia(10));
+    }
+
+    @Test
+    public void testExisteDia(){
+        assertTrue(gestor.existeDia("Viernes"));
+        assertFalse(gestor.existeDia("Friday"));
+    }
+
+    @Test
+    public void testOrdenarAlfabeticamente(){
+        gestor.ordenarAlfabeticamente();
+        List<String> dias = gestor.getDias();
+        assertEquals("Domingo", dias.get(0));
+    }
+
+    @Test
+    public void testVaciarLista(){
+        gestor.vaciarLista();
+        assertEquals(0, gestor.getLargo());
+    }
 }
+
+
 
 
 
