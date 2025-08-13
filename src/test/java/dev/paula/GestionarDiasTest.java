@@ -38,6 +38,8 @@ public class GestionarDiasTest {
     public void testGetDia(){
         assertEquals("Lunes", gestor.getDia(0));
         assertNull(gestor.getDia(10));
+        assertNull(gestor.getDia(-1));
+
     }
 
     @Test
